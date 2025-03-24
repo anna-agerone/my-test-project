@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NTC LLC</title>
+        <link rel="stylesheet" href="./index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link rel="preload" href="./images/trailer_1.jpeg" as="image" />
+        <link rel="preload" href="./images/trailer_2.jpeg" as="image" />
+        <link rel="preload" href="./images/trailer_3.jpeg" as="image" />
+        <link rel="preload" href="./images/trailer_4.jpeg" as="image" />
+    </head>
+    <body>
+        <main class="container">
+            <header>
+                <h1 class="title">
+                    Transport Your Load <br />
+                    On The <span class="highlight">Right Trailer</span> With Us
+                </h1>
+            </header>
+            <section class="trailers" aria-label="Trailer Selection">
+                <div class="trailer trailer_1" aria-label="Trailer 1" role="img" tabindex="0">
+                    <div class="content">
+                        <h2 class="title">Double Drop Deck Trailer</h2>
+                        <div class="content_box">
+                            <h3 class="subtitle">Max dimensions:</h3>
+                            <p class="text">29FT Length | 8.5FT Width | 11.5FT Height</p>
+                        </div>
+                        <div class="content_box">
+                            <h3 class="subtitle">Max Weight:</h3>
+                            <p class="text">45,000LBS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trailer trailer_2" aria-label="Trailer 2" role="img" tabindex="0">
+                    <div class="content">
+                        <h2 class="title">Step Deck Trailer</h2>
+                        <div class="content_box">
+                            <h3 class="subtitle">Max dimensions:</h3>
+                            <p class="text">53FT Length | 8.5FT Width | 11.5FT Height</p>
+                        </div>
+                        <div class="content_box">
+                            <h3 class="subtitle">Max Weight:</h3>
+                            <p class="text">48,000LBS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trailer trailer_3" aria-label="Trailer 3" role="img" tabindex="0">
+                    <div class="content">
+                        <h2 class="title">Removable Gooseneck Trailer</h2>
+                        <div class="content_box">
+                            <h3 class="subtitle">Max dimensions:</h3>
+                            <p class="text">29FT Length | 8.5FT Width | 11.5FT Height</p>
+                        </div>
+                        <div class="content_box">
+                            <h3 class="subtitle">Max Weight:</h3>
+                            <p class="text">45,000LBS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trailer trailer_4" aria-label="Trailer 4" role="img" tabindex="0">
+                    <div class="content">
+                        <h2 class="title">Flatbed Trailer</h2>
+                        <div class="content_box">
+                            <h3 class="subtitle">Max dimensions:</h3>
+                            <p class="text">53FT Length | 8.5FT Width | 11.5FT Height</p>
+                        </div>
+                        <div class="content_box">
+                            <h3 class="subtitle">Max Weight:</h3>
+                            <p class="text">48,000LBS</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="box">
+                <button class="explore_button" aria-label="Explore all trailers" tabindex="0">
+                    <p class="text">Explore All Trailers</p>
+                    <img
+                        class="arrow"
+                        src="images/right-arrow.png"
+                        alt="Right Arrow pointing right"
+                    />
+                </button>
+            </div>
+        </main>
+        <script>
+          const trailers = document.querySelectorAll('.trailer');
+          const button = document.querySelector('.explore_button');
+          let currentFocus = 0;
+
+          document.addEventListener('keydown', function(event) {
+              if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+                  if (currentFocus < trailers.length) {
+                      currentFocus = (currentFocus + 1) % (trailers.length + 1);
+                      if (currentFocus === trailers.length) {
+                          button.focus();
+                      } else {
+                          trailers[currentFocus].focus();
+                      }
+                  }
+              } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+                  if (currentFocus > 0) {
+                      currentFocus = (currentFocus - 1 + trailers.length + 1) % (trailers.length + 1);
+                      if (currentFocus === trailers.length) {
+                          button.focus();
+                      } else {
+                          trailers[currentFocus].focus();
+                      }
+                  }
+              } else if (event.key === 'Enter') {
+                  if (currentFocus === trailers.length) {
+                      button.click();
+                  }
+              }
+          });
+        </script>
+    </body>
+</html>
+
