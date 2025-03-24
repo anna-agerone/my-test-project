@@ -120,6 +120,12 @@ body {
   gap: 4px;
 }
 
+@media (max-width: 1024px) {
+  .content {
+     line-height: 150%;
+  }
+}
+
 .content .title {
   padding: 0;
   padding-bottom: 8px;
