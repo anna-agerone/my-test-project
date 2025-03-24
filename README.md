@@ -18,7 +18,7 @@ This project was built with the following technologies:
 This is a front-end project where I created a responsive and interactive web page to showcase different types of trailers. It was built to match the design in Figma and includes elements like hover effects, focus states, and a navigation system using JavaScript.
 
 ## Features
-- **Responsive Layout:** The project adjusts to different screen sizes.
+- **Layout:** The project is initially designed with a desktop-first approach, as per the requirements. Efforts to implement a responsive layout that adjusts to various screen sizes are underway. In the next phase, the project will be rewritten using a mobile-first approach, ensuring seamless functionality across mobile, tablet, and desktop views.
 - **Keyboard Navigation and Accesability:** Users can navigate through the trailers using arrow keys and can focus on the "Explore All Trailers" button using the Enter key.
 - **Preloading for Optimization:** Key resources like fonts, images, and JavaScript files are preloaded to enhance loading performance and accessibility. This ensures that the page renders smoothly and critical assets are available early in the user’s interaction.
 - **Interactive Elements:** The button and trailers are interactive and clickable for further engagement.
