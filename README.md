@@ -23,6 +23,7 @@ This is a front-end project where I created a responsive and interactive web pag
 - **Preloading for Optimization:** Key resources like fonts, images, and JavaScript files are preloaded to enhance loading performance and accessibility. This ensures that the page renders smoothly and critical assets are available early in the user’s interaction.
 - **Interactive Elements:** The button and trailers are interactive and clickable for further engagement.
 - **Hover Effects:** Trailers and buttons have hover effects to improve user experience.
+- **Grid and Flexbox Layout**: The layout is built with CSS Grid for structured, two-column designs and Flexbox for flexibility, centering, and responsiveness. Flexbox is used for smaller screen sizes to stack the elements vertically, ensuring a smooth transition across devices.
 
 ## Installation
 
