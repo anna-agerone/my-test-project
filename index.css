@@ -30,6 +30,17 @@ body {
   color: #fff;
 }
 
+
+.trailers {
+  padding-inline: 64px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 24px;
+}
+
+
 .container .title .highlight {
   font-weight: 700;
   font-size: 51px;
@@ -49,7 +60,7 @@ body {
   gap: 24px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .trailers {
     display: flex;
     flex-direction: column;
@@ -123,6 +134,7 @@ body {
 @media (max-width: 1024px) {
   .content {
      line-height: 150%;
+     padding-block: 20px;
   }
 }
 
